@@ -22,7 +22,7 @@ module.exports = {
       user : 'root',
       host : '138.68.227.13',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
+      repo : 'https://github.com/Jimmydalecleveland/node-app-test.git',
       path : '~/node-app',
       'post-deploy' : 'nvm install && npm install && pm2 reload ecosystem.config.js --env production'
     }
