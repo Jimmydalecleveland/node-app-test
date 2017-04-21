@@ -20,7 +20,7 @@ module.exports = {
   deploy : {
     production : {
       user : 'root',
-      host : '138.68.227.13',
+      host : '138.197.200.20',
       ref  : 'origin/master',
       repo : 'https://github.com/Jimmydalecleveland/node-app-test.git',
       path : '~/node-app',
