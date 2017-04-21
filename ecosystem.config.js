@@ -5,7 +5,7 @@ module.exports = {
    */
   apps : [
     {
-      name      : 'API',
+      name      : 'node-app-test',
       script    : './bin/www',
       env_production : {
         NODE_ENV: 'production'
