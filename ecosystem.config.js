@@ -6,7 +6,7 @@ module.exports = {
   apps : [
     {
       name      : 'API',
-      script    : 'app.js',
+      script    : './bin/www',
       env_production : {
         NODE_ENV: 'production'
       }
