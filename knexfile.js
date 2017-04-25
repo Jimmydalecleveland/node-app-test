@@ -12,7 +12,7 @@ module.exports = {
     client: "mysql",
     connection: {
       host: "138.197.200.20",
-      user: "root",
+      user: "deploy",
       password: "climh4zard",
       database: "production",
     }
