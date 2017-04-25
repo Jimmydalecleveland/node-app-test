@@ -12,6 +12,7 @@ module.exports = {
     client: "mysql",
     connection: {
       host: "138.197.200.20",
+      port: "/var/run/mysqld/mysqld.sock",
       user: "deploy",
       password: "climh4zard",
       database: "production",
