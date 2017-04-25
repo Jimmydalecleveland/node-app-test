@@ -45,14 +45,14 @@ app
       authenticated: req.isAuthenticated(),
     })
   })
-  .get('login', (req, res, next) => {
+  .get('/login', (req, res, next) => {
     res.render('login')
   })
-  .post('login', passport.authenticate('local', {
+  .post('/login', passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/login',
   }))
-  .get('logout', (req, res, next) => {
+  .get('/logout', (req, res, next) => {
     req.session.destroy(err => {
       res.redirect('/login');
     })

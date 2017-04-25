@@ -10,7 +10,7 @@ function authenticate(username, password, done) {
     .where('username', username)
     .first()
     .then(user => {
-      if (!user || !bcrypt.compare(password, user.password)) {
+      if (!user || !bcrypt.compareSync(password, user.password)) {
         return done(null, false, { message: 'Incorrect username or password.' });
       }
 
