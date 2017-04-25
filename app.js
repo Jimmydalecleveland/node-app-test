@@ -6,6 +6,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const db = require('./db');
+const bcrypt = require('bcrypt-nodejs');
+const passport = require('passport');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
@@ -22,7 +24,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('node-sass-middleware')({
+app.use(require('node-sass-m$2a$10$dE91PaFgzZn.0TA3/EEQXeXHwZrHOQLnpJuk.kBZ/5.f/c1tNeHmqiddleware')({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
   indentedSyntax: true,
@@ -30,8 +32,29 @@ app.use(require('node-sass-middleware')({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
 app
+  .use(session({ secret: 'I <3 mews', resave: false, saveUninitialzed: false }))
+  .use(passport.initialize())
+  .use(passport.session())
+  .get('/', (req, res, next) => {
+    res.send({
+      session: req.session,
+      user: req.user,
+      authenticated: req.isAuthenticated(),
+    })
+  })
+  .get('login', (req, res, next) => {
+    res.render('login')
+  })
+  .post('login', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+  }))
+  .get('logout', (req, res, next) => {
+    req.session.destroy(err => {
+      res.redirect('/login');
+    })
+  })
   .get('/users', (req, res, next) => {
     db("users").then((users) => {
       res.send(users)

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -16,6 +16,7 @@
     "morgan": "~1.7.0",
     "mysql": "^2.13.0",
     "node-sass-middleware": "0.9.8",
+    "passport": "^0.3.2",
     "serve-favicon": "~2.3.2"
   },
   "devDependencies": {
