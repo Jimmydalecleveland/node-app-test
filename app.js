@@ -1,13 +1,15 @@
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+const bcrypt = require('bcrypt-nodejs');
 
 const db = require('./db');
-const bcrypt = require('bcrypt-nodejs');
-const passport = require('passport');
+require('./passport')
 
 const index = require('./routes/index');
 const users = require('./routes/users');
@@ -24,7 +26,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('node-sass-m$2a$10$dE91PaFgzZn.0TA3/EEQXeXHwZrHOQLnpJuk.kBZ/5.f/c1tNeHmqiddleware')({
+app.use(require('node-sass-middleware')({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
   indentedSyntax: true,
@@ -33,7 +35,7 @@ app.use(require('node-sass-m$2a$10$dE91PaFgzZn.0TA3/EEQXeXHwZrHOQLnpJuk.kBZ/5.f/
 app.use(express.static(path.join(__dirname, 'public')));
 
 app
-  .use(session({ secret: 'I <3 mews', resave: false, saveUninitialzed: false }))
+  .use(session({ secret: 'I <3 mews', resave: false, saveUninitialized: false }))
   .use(passport.initialize())
   .use(passport.session())
   .get('/', (req, res, next) => {
