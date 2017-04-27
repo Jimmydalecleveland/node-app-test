@@ -64,29 +64,29 @@ input[type=password] {
 .T-LOGIN-input-wrapper {
   position: relative;
   vertical-align: middle;
+  background: none;
   border: 0;
-  box-shadow: inset 0 0 0 2px #ccc; }
-  .T-LOGIN-input-wrapper::before {
-    content: '';
-    position: relative;
-    width: 100%;
-    height: 100%; }
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px #ddd;
+  color: #ddd; }
   .T-LOGIN-input-wrapper::before, .T-LOGIN-input-wrapper::after {
+    box-sizing: inherit;
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    transform-origin: center;
-    transform: scale3d(0, 1, 1); }
+    transform-origin: center; }
   .T-LOGIN-input-wrapper::before {
     border-top: solid 2px #6a6370;
-    border-bottom: solid 2px #6a6370; }
+    border-bottom: solid 2px #6a6370;
+    transform: scale3d(0, 1, 1); }
   .T-LOGIN-input-wrapper::after {
     border-left: solid 2px #6a6370;
-    border-right: solid 2px #6a6370; }
-  .T-LOGIN-input-wrapper:focus, .T-LOGIN-input-wrapper:hover {
+    border-right: solid 2px #6a6370;
+    transform: scale3d(1, 0, 1); }
+  .T-LOGIN-input-wrapper:focus::before, .T-LOGIN-input-wrapper:focus::after, .T-LOGIN-input-wrapper:hover::before, .T-LOGIN-input-wrapper:hover::after {
     transform: scale3d(1, 1, 1);
     transition: transform 0.5s; }
   .T-LOGIN-input-wrapper label {
