@@ -13,6 +13,7 @@ require('./passport')
 
 const index = require('./routes/index');
 const users = require('./routes/users');
+const postRoutes = require('./routes/posts');
 
 const app = express();
 
@@ -38,6 +39,7 @@ app
   .use(session({ secret: 'I <3 mews', resave: false, saveUninitialized: false }))
   .use(passport.initialize())
   .use(passport.session())
+  .use(postRoutes)
   .get('/', (req, res, next) => {
     res.send({
       session: req.session,
