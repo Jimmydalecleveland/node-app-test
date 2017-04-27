@@ -1,18 +1,55 @@
+@import url(http://fonts.googleapis.com/css?family=Kelly+Slab|Josefin+Slab:300,400,700|Slabo+13px);
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
   background-color: #f2f2f2;
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px 'Josefin Slab', serif; }
 
 a {
   color: #00B7FF; }
 
+h1 {
+  font-size: 6em;
+  font-weight: 300; }
+
+input[type=submit] {
+  margin-top: 2rem;
+  color: #fff;
+  border: none;
+  background-color: salmon;
+  padding: 0.4em 2em;
+  font-size: 1.2em; }
+
 .site-wrapper {
-  text-align: center; }
+  text-align: center;
+  width: 100vw;
+  min-height: 100vh;
+  color: #fff;
+  background-image: linear-gradient(245deg, #ff6b6b, #556270);
+  background-size: 400% 400%;
+  animation: Vampire 17s ease infinite; }
+
+@keyframes Vampire {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 51%; }
+  100% {
+    background-position: 0% 50%; } }
 
 .T-LOGIN-container {
   padding: 50px;
   background-color: #fff;
-  border: solid 1px #ccc;
-  box-shadow: 0 0 3px #ccc; }
+  color: #333;
+  font-weight: 500;
+  font-size: 1.6em;
+  border: solid 1px #714b62;
+  box-shadow: -2px 2px 8px #714b62;
+  width: 600px;
+  margin: 100px auto 0; }
 
 /*# sourceMappingURL=style.css.map */
