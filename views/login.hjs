@@ -11,13 +11,13 @@
     <div class="T-LOGIN-container">
 
       <form action="/login" method="post">
-        <div>
+        <div class="T-LOGIN-input">
           <label for="username">Username: </label>
-          <input type="text" name="username" />
+          <input type="text" name="username" placeholder="Username" />
         </div>
-        <div>
+        <div class="T-LOGIN-input">
           <label for="password">Password: </label>
-          <input type="password" name="password" />
+          <input type="password" name="password" placeholder="Password"/>
         </div>
         <input type="submit" value="Log In" />
       </form>

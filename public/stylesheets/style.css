@@ -22,7 +22,16 @@ input[type=submit] {
   border: none;
   background-color: salmon;
   padding: 0.4em 2em;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  cursor: pointer; }
+
+input[type=text],
+input[type=password] {
+  border: solid 1px #ccc;
+  padding: 1em 1.5em;
+  border-radius: 2px;
+  margin-bottom: 2em;
+  font-size: 16px; }
 
 .site-wrapper {
   text-align: center;
@@ -32,6 +41,10 @@ input[type=submit] {
   background-image: linear-gradient(245deg, #ff6b6b, #556270);
   background-size: 400% 400%;
   animation: Vampire 17s ease infinite; }
+  .site-wrapper::before {
+    content: 'yo boy';
+    width: 100%;
+    height: 100%; }
 
 @keyframes Vampire {
   0% {
@@ -47,9 +60,49 @@ input[type=submit] {
   color: #333;
   font-weight: 500;
   font-size: 1.6em;
-  border: solid 1px #714b62;
   box-shadow: -2px 2px 8px #714b62;
   width: 600px;
   margin: 100px auto 0; }
+
+.T-LOGIN-input input[type=text],
+.T-LOGIN-input input[type=password] {
+  position: relative;
+  vertical-align: middle;
+  border: 0;
+  box-shadow: inset 0 0 0 2px #ccc; }
+  .T-LOGIN-input input[type=text]::before, .T-LOGIN-input input[type=text]::after,
+  .T-LOGIN-input input[type=password]::before,
+  .T-LOGIN-input input[type=password]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+    transform: scale3d(0, 1, 1); }
+  .T-LOGIN-input input[type=text]::before,
+  .T-LOGIN-input input[type=password]::before {
+    border-top: solid 2px #6a6370;
+    border-bottom: solid 2px #6a6370; }
+  .T-LOGIN-input input[type=text]::after,
+  .T-LOGIN-input input[type=password]::after {
+    border-left: solid 2px #6a6370;
+    border-right: solid 2px #6a6370; }
+  .T-LOGIN-input input[type=text]:focus, .T-LOGIN-input input[type=text]:hover,
+  .T-LOGIN-input input[type=password]:focus,
+  .T-LOGIN-input input[type=password]:hover {
+    transform: scale3d(1, 1, 1);
+    transition: transform 0.5s; }
+
+.T-LOGIN-input label {
+  position: absolute;
+  margin: -10px 0 0 10px;
+  background-color: #6a6370;
+  border-radius: 2px;
+  color: #fff;
+  padding: .3em 1.5em;
+  font-size: 13px;
+  font-family: sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
