@@ -13,6 +13,7 @@ require('./passport')
 
 const index = require('./routes/index');
 const users = require('./routes/users');
+const authRoutes = require('./routes/auth');
 const postRoutes = require('./routes/posts');
 
 const app = express();
@@ -39,24 +40,13 @@ app
   .use(session({ secret: 'I <3 mews', resave: false, saveUninitialized: false }))
   .use(passport.initialize())
   .use(passport.session())
+  .use(authRoutes)
   .use(postRoutes)
   .get('/', (req, res, next) => {
     res.send({
       session: req.session,
       user: req.user,
       authenticated: req.isAuthenticated(),
-    })
-  })
-  .get('/login', (req, res, next) => {
-    res.render('login')
-  })
-  .post('/login', passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/login',
-  }))
-  .get('/logout', (req, res, next) => {
-    req.session.destroy(err => {
-      res.redirect('/login');
     })
   })
   .get('/users', (req, res, next) => {

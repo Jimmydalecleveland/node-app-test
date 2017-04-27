@@ -6,4 +6,13 @@ body {
 a {
   color: #00B7FF; }
 
+.site-wrapper {
+  text-align: center; }
+
+.T-LOGIN-container {
+  padding: 50px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  box-shadow: 0 0 3px #ccc; }
+
 /*# sourceMappingURL=style.css.map */
