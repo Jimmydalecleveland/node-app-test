@@ -65,9 +65,9 @@ input[type=password] {
   margin: 100px auto 0; }
   .T-LOGIN-container input[type=submit] {
     display: block;
-    margin: 1rem auto 0;
+    margin: 1rem auto 2rem;
     font-family: 'Josefin Slab', serif;
-    font-weight: 600;
+    letter-spacing: 1px;
     border-radius: 3px;
     transition: box-shadow .5s ease, transform .5s ease;
     box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4); }

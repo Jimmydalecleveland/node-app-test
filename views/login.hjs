@@ -11,6 +11,7 @@
     <div class="T-LOGIN-container">
 
       <form action="/login" method="post">
+      
         <div class="T-LOGIN-input-wrapper">
           <input type="text" name="username" placeholder="Username" />
           <div class="outline">
@@ -18,6 +19,7 @@
             <label for="username">USERNAME </label>
           </div>
         </div>
+
         <div class="T-LOGIN-input-wrapper">
           <input type="password" name="password" placeholder="Password"/>
           <div class="outline">
@@ -25,7 +27,12 @@
             <label for="password">PASSWORD </label>
           </div>
         </div>
+
+        {{!--Submit Button--}}
         <input type="submit" value="Log In" />
+
+        {{!--Github Button--}}
+        <a href="/auth/github">Login with Github</a>    
       </form>
 
     </div>

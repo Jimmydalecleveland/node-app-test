@@ -6,7 +6,7 @@ router
     res.render('signup');
   })
   .post('/signup', passport.authenticate('local-register', {
-    successRedirect: '/allPosts',
+    successRedirect: '/',
     failureRedirect: '/signup'
   }))
   .get('/login', (req, res, next) => {
@@ -22,6 +22,16 @@ router
     req.session.destroy(err => {
       res.redirect('/login');
     })
+  })
+  .get('/auth/github', passport.authenticate('github', {
+    scope: [ 'user:email' ]
+  }))
+  .get('/auth/github/callback', passport.authenticate('github', {
+    failureRedirect: '/login' 
+  }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
   })
 ;
 
