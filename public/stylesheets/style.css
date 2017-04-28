@@ -66,9 +66,13 @@ input[type=password] {
 .T-LOGIN-input-wrapper {
   display: inline-block;
   position: relative;
-  margin-bottom: 2.5rem; }
+  margin-bottom: 1.5rem;
+  box-shadow: inset 0 0 0 2px #ddd;
+  border-radius: 3px; }
   .T-LOGIN-input-wrapper label {
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 3;
     opacity: 0;
     margin: -10px 0 0 15px;
@@ -81,9 +85,6 @@ input[type=password] {
     font-family: sans-serif;
     transform: translateX(-15px);
     transition: transform 0.3s, opacity 0.3s; }
-  .T-LOGIN-input-wrapper input:focus + label {
-    opacity: 1;
-    transform: translateX(0); }
   .T-LOGIN-input-wrapper input {
     position: relative;
     z-index: 2;
@@ -94,7 +95,6 @@ input[type=password] {
   .T-LOGIN-input-wrapper .outline {
     z-index: 1;
     background: none;
-    box-shadow: inset 0 0 0 2px #ddd;
     border-radius: 3px;
     color: #ddd; }
     .T-LOGIN-input-wrapper .outline::before, .T-LOGIN-input-wrapper .outline::after {
@@ -123,5 +123,8 @@ input[type=password] {
     border-bottom-color: #6a6370;
     border-left-color: #6a6370;
     transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+  .T-LOGIN-input-wrapper input:focus + .outline label {
+    opacity: 1;
+    transform: translateX(0); }
 
 /*# sourceMappingURL=style.css.map */
