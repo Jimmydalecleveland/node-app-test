@@ -3,6 +3,7 @@
   <head>
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    {{!--<script src='/js/login.js' />--}}
   </head>
   <body>
   <div class="site-wrapper">
@@ -14,6 +15,7 @@
         <div class="T-LOGIN-input-wrapper">
           <label for="username">USERNAME </label>
           <input type="text" name="username" placeholder="Username" />
+          <div class="outline"></div>
         </div>
         <div class="T-LOGIN-input-wrapper">
           <label for="password">PASSWORD </label>
