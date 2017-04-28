@@ -13,9 +13,9 @@ passport.use('local-register', new LocalStrategy
 );
 
 passport.use(new GitHubStrategy({
-    clientID: '4626ef89bdd65a6025d1',
-    clientSecret: 'b3e8e0804f12dc0ea1106f9a2be149345fffb412',
-    callbackURL: 'http://localhost:3000/auth/github/callback'
+    clientID: '3ef74d18e923a2ba8cbd',
+    clientSecret: '6943a4bd5468428ccb0c6bd7668b17034e1822e7',
+    callbackURL: 'http://nodeapp.jimmydc.com:3000/auth/github/callback'
   },
   function(accessToken, refreshToken, profile, done) {
     console.log(profile);
