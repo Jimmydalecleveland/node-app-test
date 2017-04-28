@@ -5,7 +5,11 @@ const db = require('./db');
 const LocalStrategy = require('passport-local').Strategy;
 
 passport.use(new LocalStrategy(authenticate));
-passport.use('local-register', new LocalStrategy({passReqToCallback: true}, register));
+passport.use('local-register', new LocalStrategy
+  ({
+    passReqToCallback: true
+  }, register)
+);
 
 function authenticate(username, password, done) {
   db('users')
