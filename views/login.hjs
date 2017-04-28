@@ -7,7 +7,7 @@
   </head>
   <body>
   <div class="site-wrapper">
-    <h1>{{title}}</h1>
+    <h1>Speak thy name and the passphrase to enter, hunter.</h1>
     {{!--  Login Container  --}}
     <div class="T-LOGIN-container">
 

@@ -3,7 +3,7 @@ const router = require('express').Router();
 router
   .get('/login', (req, res, next) => {
     res.render('login', {
-      title: 'Sign in to view your posts.'
+      title: 'Sign In'
     })
   })
   // .post('/login', passport.authenticate('local', {

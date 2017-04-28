@@ -7,21 +7,23 @@ body,
 
 body {
   background-color: #f2f2f2;
-  font: 14px 'Josefin Slab', serif; }
+  font-family: 'Josefin Slab', serif; }
 
 a {
   color: #00B7FF; }
 
 h1 {
   padding-top: 2rem;
-  font-size: 6em;
-  font-weight: 300; }
+  font-size: 4.5em;
+  font-weight: 300;
+  max-width: 900px;
+  margin: 0 auto; }
 
 input[type=submit] {
   margin-top: 2rem;
   color: #fff;
   border: none;
-  background-color: salmon;
+  background-color: #ff6b6b;
   padding: 0.4em 2em;
   font-size: 1.2em;
   cursor: pointer; }
@@ -39,7 +41,7 @@ input[type=password] {
   width: 100vw;
   min-height: 100vh;
   color: #fff;
-  background-image: linear-gradient(245deg, #ff6b6b, #556270);
+  background-image: linear-gradient(245deg, #ff6b6b, #3e4853);
   background-size: 400% 400%;
   animation: Vampire 17s ease infinite; }
 
@@ -52,16 +54,19 @@ input[type=password] {
     background-position: 0% 50%; } }
 
 .T-LOGIN-container {
-  padding: 50px;
+  padding: 75px 50px;
   background-color: #fff;
   color: #333;
   font-weight: 500;
   font-size: 1.6em;
-  box-shadow: -2px 2px 8px #714b62;
-  width: 600px;
+  box-shadow: -3px 3px 8px #714b62;
+  width: 500px;
   margin: 100px auto 0; }
   .T-LOGIN-container input[type=submit] {
-    display: block; }
+    display: block;
+    margin: 0 auto;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600; }
 
 .T-LOGIN-input-wrapper {
   display: inline-block;
@@ -110,7 +115,10 @@ input[type=password] {
     background: transparent;
     border: 0;
     margin-bottom: 0;
-    outline: 0; }
+    outline: 0;
+    font-family: 'Josefin Slab', serif;
+    font-size: 18px;
+    letter-spacing: 1px; }
     .T-LOGIN-input-wrapper input:focus + .outline::before,
     .T-LOGIN-input-wrapper input:focus + .outline::after {
       width: 100%;
