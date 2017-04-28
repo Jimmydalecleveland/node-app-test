@@ -15,12 +15,14 @@
         <div class="T-LOGIN-input-wrapper">
           <input type="text" name="username" placeholder="Username" />
           <div class="outline">
+            {{!--  label must be inside outline to activate upon focus  --}}
             <label for="username">USERNAME </label>
           </div>
         </div>
         <div class="T-LOGIN-input-wrapper">
           <input type="password" name="password" placeholder="Password"/>
           <div class="outline">
+            {{!--  label must be inside outline to activate upon focus  --}}
             <label for="password">PASSWORD </label>
           </div>
         </div>
