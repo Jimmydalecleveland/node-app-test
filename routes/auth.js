@@ -1,3 +1,4 @@
+const passport = require('passport');
 const router = require('express').Router();
 
 router
@@ -6,10 +7,10 @@ router
       title: 'Sign In'
     })
   })
-  // .post('/login', passport.authenticate('local', {
-  //   successRedirect: '/',
-  //   failureRedirect: '/login',
-  // }))
+  .post('/login', passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+  }))
   .get('/logout', (req, res, next) => {
     req.session.destroy(err => {
       res.redirect('/login');
