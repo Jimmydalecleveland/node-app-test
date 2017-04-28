@@ -85,13 +85,6 @@ input[type=password] {
     font-family: sans-serif;
     transform: translateX(-15px);
     transition: transform 0.3s, opacity 0.3s; }
-  .T-LOGIN-input-wrapper input {
-    position: relative;
-    z-index: 2;
-    background: transparent;
-    border: 0;
-    margin-bottom: 0;
-    outline: 0; }
   .T-LOGIN-input-wrapper .outline {
     z-index: 1;
     background: none;
@@ -111,20 +104,27 @@ input[type=password] {
     .T-LOGIN-input-wrapper .outline::after {
       bottom: 0;
       right: 0; }
-  .T-LOGIN-input-wrapper input:focus + .outline::before,
-  .T-LOGIN-input-wrapper input:focus + .outline::after {
-    width: 100%;
-    height: 100%; }
-  .T-LOGIN-input-wrapper input:focus + .outline::before {
-    border-top-color: #6a6370;
-    border-right-color: #6a6370;
-    transition: height 0.25s ease-out, width 0.25s ease-out 0.25s; }
-  .T-LOGIN-input-wrapper input:focus + .outline::after {
-    border-bottom-color: #6a6370;
-    border-left-color: #6a6370;
-    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
-  .T-LOGIN-input-wrapper input:focus + .outline label {
-    opacity: 1;
-    transform: translateX(0); }
+  .T-LOGIN-input-wrapper input {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    border: 0;
+    margin-bottom: 0;
+    outline: 0; }
+    .T-LOGIN-input-wrapper input:focus + .outline::before,
+    .T-LOGIN-input-wrapper input:focus + .outline::after {
+      width: 100%;
+      height: 100%; }
+    .T-LOGIN-input-wrapper input:focus + .outline::before {
+      border-right-color: #6a6370;
+      border-top-color: #6a6370;
+      transition: height 0.25s ease-out, width 0.25s ease-out 0.25s; }
+    .T-LOGIN-input-wrapper input:focus + .outline::after {
+      border-bottom-color: #6a6370;
+      border-left-color: #6a6370;
+      transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+    .T-LOGIN-input-wrapper input:focus + .outline label {
+      opacity: 1;
+      transform: translateX(0); }
 
 /*# sourceMappingURL=style.css.map */
