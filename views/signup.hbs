@@ -1,0 +1,35 @@
+<h1>State thy name and passphrase to be made in the image of the guild.</h1>
+{{!--  Login Container  --}}
+<div class="T-LOGIN-container">
+
+  <form action="/signup" method="post">
+
+    <div class="T-LOGIN-input-wrapper">
+      <input type="text" name="username" placeholder="Username" />
+      <div class="outline">
+        {{!--  label must be inside outline to activate upon focus  --}}
+        <label for="username">USERNAME</label>
+      </div>
+    </div>
+
+    <div class="T-LOGIN-input-wrapper">
+      <input type="password" name="password" placeholder="Password"/>
+      <div class="outline">
+        {{!--  label must be inside outline to activate upon focus  --}}
+        <label for="password">PASSWORD</label>
+      </div>
+    </div>
+
+    <div class="T-LOGIN-input-wrapper">
+      <input type="password" name="password2" placeholder="Repeat Password"/>
+      <div class="outline">
+        {{!--  label must be inside outline to activate upon focus  --}}
+        <label for="password2">REPEAT PASSWORD</label>
+      </div>
+    </div>
+
+    {{!--Submit Button--}}
+    <input type="submit" value="Create Account" />
+  </form>
+
+</div>
