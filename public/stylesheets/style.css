@@ -63,17 +63,35 @@ input[type=password] {
   box-shadow: -3px 3px 8px #714b62;
   width: 500px;
   margin: 100px auto 0; }
-  .T-LOGIN-container input[type=submit] {
-    display: block;
-    margin: 1rem auto 2rem;
+  .T-LOGIN-container input {
+    width: 250px; }
+  .T-LOGIN-container input[type=submit],
+  .T-LOGIN-container .login-button {
+    display: inline-block;
+    margin: 1rem auto 1.5rem;
     font-family: 'Josefin Slab', serif;
     letter-spacing: 1px;
     border-radius: 3px;
+    text-decoration: none;
+    color: #fff;
+    width: 250px;
     transition: box-shadow .5s ease, transform .5s ease;
     box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4); }
-    .T-LOGIN-container input[type=submit]:hover {
+    .T-LOGIN-container input[type=submit]:hover,
+    .T-LOGIN-container .login-button:hover {
       box-shadow: 0 35px 20px -20px rgba(0, 0, 0, 0.3);
       transform: translate(0px, -10px); }
+    .T-LOGIN-container input[type=submit] img,
+    .T-LOGIN-container .login-button img {
+      max-width: 32px;
+      vertical-align: middle;
+      margin-right: 10px; }
+  .T-LOGIN-container .login-button--github {
+    margin-bottom: 0;
+    background-color: #394454;
+    padding: 0.6em 0.6em;
+    font-size: 0.75em;
+    letter-spacing: 0.5px; }
 
 .T-LOGIN-input-wrapper {
   display: inline-block;

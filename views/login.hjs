@@ -40,7 +40,10 @@
         <input type="submit" value="Log In" />
 
         {{!--Github Button--}}
-        <a href="/auth/github">Login with Github</a>    
+        <a class="login-button login-button--github" href="/auth/github">
+          <img src="images/github-icon--32.png" alt="Github Icon">
+          <span>Login with Github</span>
+        </a>
       </form>
 
     </div>
