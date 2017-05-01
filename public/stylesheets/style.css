@@ -160,4 +160,14 @@ input[type=password] {
       opacity: 1;
       transform: translateX(0); }
 
+.grid-container {
+  display: grid;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #fff; }
+
+.grid-item {
+  color: #333; }
+
 /*# sourceMappingURL=style.css.map */

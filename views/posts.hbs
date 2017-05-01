@@ -1,6 +1,9 @@
 <h1>{{title}}</h1>
-<ul>
+
+<div class="grid-container">
   {{#posts}}
-    <li>{{text}} <strong>User ID: {{user_id}}</strong></li>
+    <div class="grid-item">
+      {{text}} <strong>User ID: {{user_id}}</strong>
+    </div>
   {{/posts}}
-</ul>
+</div>
