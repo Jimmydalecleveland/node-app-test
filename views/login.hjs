@@ -11,9 +11,13 @@
     <div class="T-LOGIN-container">
 
       <form action="/login" method="post">
-      
+
         <div class="T-LOGIN-input-wrapper">
-          <input type="text" name="username" placeholder="Username" />
+          <input  type="text"
+                  name="username"
+                  placeholder="Username"
+                  onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = 'Username'" />
           <div class="outline">
             {{!--  label must be inside outline to activate upon focus  --}}
             <label for="username">USERNAME </label>
@@ -21,7 +25,11 @@
         </div>
 
         <div class="T-LOGIN-input-wrapper">
-          <input type="password" name="password" placeholder="Password"/>
+          <input  type="password"
+                  name="password"
+                  placeholder="Password"
+                  onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = 'Password'" />
           <div class="outline">
             {{!--  label must be inside outline to activate upon focus  --}}
             <label for="password">PASSWORD </label>
